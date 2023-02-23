@@ -1,0 +1,27 @@
+--CREATING A RUNNING STORE DATABASE 
+CREATE TABLE running_store (id INTEGER PRIMARY KEY, brand TEXT, price INTEGER, color TEXT, type TEXT);
+INSERT INTO running_store VALUES (1, "nike", 100, "black", "casual_shoe");
+INSERT INTO running_store VALUES (2, "new_balance", 120, "white", "running_shoe");
+INSERT INTO running_store VALUES (3, "adidas", 150, "blue", "track_spike");
+INSERT INTO running_store VALUES (4, "puma", 80, "pink", "crosscountry_spike");
+INSERT INTO running_store VALUES (5, "on", 200, "gray", "super_shoe");
+INSERT INTO running_store VALUES (6, "nike", 300, "clear", "super_shoe");
+INSERT INTO running_store VALUES (7, "new_balance", 135, "mixed_pattern", "casual_shoe");
+INSERT INTO running_store VALUES (8, "adidas", 215, "yellow", "crosscountry_spike");
+INSERT INTO running_store VALUES (9, "puma", 65, "red", "flats");
+INSERT INTO running_store VALUES (10, "on", 240, "green", "track_spikes");
+INSERT INTO running_store VALUES (11, "nike", 255, "maroon", "casual_shoe");
+INSERT INTO running_store VALUES (12, "new_balance", 90, "blue", "flats");
+INSERT INTO running_store VALUES (13, "adidas", 220, "black", "crosscountry_spike");
+INSERT INTO running_store VALUES (14, "puma", 165, "yellow", "running_shoe");
+INSERT INTO running_store VALUES (15, "on", 245, "white", "casual_shoe");
+
+--DISPLAY THE RUNNING STORE DATA BASE BY PRICE
+SELECT * FROM running_store ORDER BY price;
+
+--WHAT ARE THE PRICES OF WHITE SHOES
+SELECT * FROM running_store WHERE color="white" ORDER BY price ASC;
+
+--WHAT ARE THE AVERAGE PRICES OF SHOES FROM EACH BRAND
+SELECT brand, avg (price) FROM running_store GROUP BY brand;
+
